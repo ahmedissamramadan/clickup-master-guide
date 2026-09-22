@@ -25,6 +25,7 @@
       <small class="lang-ar">إصدار 2026</small>
     </a>
     <div class="header-actions">
+      <button class="print-btn" id="printBtn" type="button" aria-label="Print or Save PDF / طباعة وحفظ PDF"><span class="p-icon">⎙</span><span class="lang-en">PDF</span><span class="lang-ar">نسخة PDF</span></button>
       <button class="search-btn" id="searchBtn" type="button" aria-label="Search / بحث"><span>⌕</span><kbd>Ctrl K</kbd></button>
       <div class="lang-switch" role="group" aria-label="Language / اللغة">
         <button type="button" data-lang-btn="ar" class="active">العربية</button>
@@ -52,14 +53,15 @@
         <h1>Master <strong>ClickUp</strong> <span class="grad">once and for all</span>.</h1>
         <p class="hero-sub">A deep, structured, no-fluff guide to every layer of ClickUp: the hierarchy, tasks, 15+ views, custom fields, automations, AI, docs, dashboards, pricing, and the mistakes to avoid, whether you lead a team of 3 or 300.</p>
         <div class="hero-meta">
-          <span><b>19</b> sections</span>
+          <span><b>20</b> sections</span>
           <span><b>EN</b> + <b>AR</b> bilingual</span>
-          <span>Updated <b>September 2026</b></span>
+          <span>Verified <b>September 2026</b></span>
           <span>Zero prior knowledge needed</span>
         </div>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#what-is-clickup">Start reading <span class="arr">→</span></a>
           <a class="btn btn-ghost" href="#pricing">Jump to pricing</a>
+          <button class="btn btn-ghost" type="button" onclick="window.print()">Download / Print PDF</button>
         </div>
       </div>
       <div class="lang-ar">
@@ -67,14 +69,15 @@
         <h1>أتقن <strong>ClickUp</strong>, <span class="grad">من الألف إلى الياء</span>.</h1>
         <p class="hero-sub">دليل عميق ومنظّم وبلا حشو لكل طبقات ClickUp: الهيكل الهرمي، المهام، أكثر من 15 طريقة عرض، الحقول المخصصة، الأتمتة، الذكاء الاصطناعي، المستندات، لوحات المعلومات، الأسعار، والأخطاء التي يجب تجنبها، سواء تدير فريقًا من 3 أفراد أو 300.</p>
         <div class="hero-meta">
-          <span><b>19</b> قسمًا</span>
+          <span><b>20</b> قسمًا</span>
           <span>عربي <b>+</b> إنجليزي</span>
-          <span>محدَّث <b>سبتمبر 2026</b></span>
+          <span>محدَّث وموثّق <b>سبتمبر 2026</b></span>
           <span>لا يتطلب خبرة سابقة</span>
         </div>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#what-is-clickup">ابدأ القراءة <span class="arr">←</span></a>
           <a class="btn btn-ghost" href="#pricing">انتقل إلى الأسعار</a>
+          <button class="btn btn-ghost" type="button" onclick="window.print()">تحميل / طباعة PDF</button>
         </div>
       </div>
     </section>
@@ -121,10 +124,30 @@
       </div>
 
       <div class="stats-band">
-        <div class="st"><div class="v">2017</div><div class="l lang-en">Founded in San Diego</div><div class="l lang-ar">تأسست في سان دييغو</div></div>
-        <div class="st"><div class="v">$4B</div><div class="l lang-en">Valuation reached in 2021</div><div class="l lang-ar">التقييم المعلن عام 2021</div></div>
-        <div class="st"><div class="v">2M+</div><div class="l lang-en">Teams using ClickUp</div><div class="l lang-ar">فريق يستخدم ClickUp</div></div>
-        <div class="st"><div class="v">1,000+</div><div class="l lang-en">Native integrations</div><div class="l lang-ar">تكامل رسمي</div></div>
+        <div class="st">
+          <div class="v">2017</div>
+          <div class="l lang-en">Founded in San Diego</div>
+          <div class="l lang-ar">تأسست في سان دييغو</div>
+          <a class="st-src" href="https://clickup.com/about" target="_blank" rel="noopener">clickup.com/about</a>
+        </div>
+        <div class="st">
+          <div class="v">$4B</div>
+          <div class="l lang-en">Valuation reached (Oct 2021)</div>
+          <div class="l lang-ar">تقييم الجولة C (أكتوبر 2021)</div>
+          <a class="st-src" href="https://techcrunch.com/2021/10/27/clickup-series-c-400m-4b-valuation/" target="_blank" rel="noopener">TechCrunch / Forbes</a>
+        </div>
+        <div class="st">
+          <div class="v">2M+</div>
+          <div class="l lang-en">Teams worldwide (2024-2026)</div>
+          <div class="l lang-ar">فريق حول العالم (2024-2026)</div>
+          <a class="st-src" href="https://clickup.com/teams" target="_blank" rel="noopener">ClickUp Company Metrics</a>
+        </div>
+        <div class="st">
+          <div class="v">1,000+</div>
+          <div class="l lang-en">Native apps &amp; integrations</div>
+          <div class="l lang-ar">تطبيق وتكامل رسمي</div>
+          <a class="st-src" href="https://clickup.com/integrations" target="_blank" rel="noopener">ClickUp Integrations Dir</a>
+        </div>
       </div>
     </section>
 
@@ -238,24 +261,98 @@
       </div>
 
       <div class="grid grid-3">
-        <div class="card view-card lang-en"><div class="v-emoji">📋</div><h4>List</h4><p>The default. Tasks grouped, filtered, and sorted in rows. Fastest for editing.</p><div class="v-best"><b>Best for</b>Daily execution and bulk edits</div></div>
-        <div class="card view-card lang-en"><div class="v-emoji">🗂️</div><h4>Board (Kanban)</h4><p>Columns = statuses; drag cards between them.</p><div class="v-best"><b>Best for</b>Visual workflow and team standups</div></div>
-        <div class="card view-card lang-en"><div class="v-emoji">📆</div><h4>Calendar</h4><p>Month/week grid by due dates; drag to reschedule.</p><div class="v-best"><b>Best for</b>Deadlines and scheduling</div></div>
-        <div class="card view-card lang-en"><div class="v-emoji">📈</div><h4>Timeline &amp; Gantt</h4><p>Bars over time with dependencies and critical path (Gantt).</p><div class="v-best"><b>Best for</b>Project plans and sequencing</div></div>
-        <div class="card view-card lang-en"><div class="v-emoji">🧮</div><h4>Table</h4><p>Spreadsheet-style grid with custom-field columns, sorting, and CSV export.</p><div class="v-best"><b>Best for</b>Data review and inventories</div></div>
-        <div class="card view-card lang-en"><div class="v-emoji">🧠</div><h4>Mind Map</h4><p>Turn any List or whiteboard into a live, clickable mind map.</p><div class="v-best"><b>Best for</b>Brainstorming that becomes tasks</div></div>
-        <div class="card view-card lang-en"><div class="v-emoji">⚖️</div><h4>Workload</h4><p>Bars per person showing capacity vs. assigned work (Business).</p><div class="v-best"><b>Best for</b>Balancing team load</div></div>
-        <div class="card view-card lang-en"><div class="v-emoji">📨</div><h4>Form</h4><p>A shareable form that creates tasks from submissions.</p><div class="v-best"><b>Best for</b>Intake requests and briefs</div></div>
-        <div class="card view-card lang-en"><div class="v-emoji">💬</div><h4>Chat view</h4><p>A channel pinned to a List or Folder, discussions live next to the work.</p><div class="v-best"><b>Best for</b>Project chatter without Slack tabs</div></div>
-        <div class="card view-card lang-ar"><div class="v-emoji">📋</div><h4>القائمة</h4><p>الافتراضية: مهام مجمّعة ومفلترة ومرتبة في صفوف، الأسرع في التعديل.</p><div class="v-best"><b>الأفضل لـ</b>التنفيذ اليومي والتعديلات الجماعية</div></div>
-        <div class="card view-card lang-ar"><div class="v-emoji">🗂️</div><h4>اللوحة (كانبان)</h4><p>أعمدة تمثل الحالات؛ اسحب البطاقات بينها.</p><div class="v-best"><b>الأفضل لـ</b>سير العمل البصري واجتماعات الفريق</div></div>
-        <div class="card view-card lang-ar"><div class="v-emoji">📆</div><h4>التقويم</h4><p>شبكة شهر/أسبوع حسب تواريخ الاستحقاق؛ اسحب لتغيير الجدولة.</p><div class="v-best"><b>الأفضل لـ</b>المواعيد النهائية والجدولة</div></div>
-        <div class="card view-card lang-ar"><div class="v-emoji">📈</div><h4>الخط الزمني وGantt</h4><p>أشرطة عبر الزمن مع اعتماديات ومسار حرج (Gantt).</p><div class="v-best"><b>الأفضل لـ</b>خطط المشاريع وتسلسل المراحل</div></div>
-        <div class="card view-card lang-ar"><div class="v-emoji">🧮</div><h4>الجدول</h4><p>شبكة على شكل Excel بأعمدة حقول مخصصة وفرز وتصدير CSV.</p><div class="v-best"><b>الأفضل لـ</b>مراجعة البيانات والجرد</div></div>
-        <div class="card view-card lang-ar"><div class="v-emoji">🧠</div><h4>الخريطة الذهنية</h4><p>حوّل أي قائمة أو سبورة إلى خريطة ذهنية حية قابلة للنقر.</p><div class="v-best"><b>الأفضل لـ</b>العصف الذهني الذي يتحول لمهام</div></div>
-        <div class="card view-card lang-ar"><div class="v-emoji">⚖️</div><h4>عبء العمل</h4><p>أشرطة لكل شخص تُظهر السعة مقابل المعيّن إليه (Business).</p><div class="v-best"><b>الأفضل لـ</b>موازنة حِمل الفريق</div></div>
-        <div class="card view-card lang-ar"><div class="v-emoji">📨</div><h4>النموذج</h4><p>نموذج قابل للمشاركة يحوّل الردود إلى مهام.</p><div class="v-best"><b>الأفضل لـ</b>استقبال الطلبات والبريفات</div></div>
-        <div class="card view-card lang-ar"><div class="v-emoji">💬</div><h4>عرض الدردشة</h4><p>قناة مثبتة على قائمة أو مجلد، النقاش يعيش بجانب العمل نفسه.</p><div class="v-best"><b>الأفضل لـ</b>نقاشات المشروع دون تبويبات Slack</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">📋</div><h4>1 · List</h4><p>The default. Tasks grouped, filtered, and sorted in rows. Fastest for editing.</p><div class="v-best"><b>Best for</b>Daily execution and bulk edits</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">🗂️</div><h4>2 · Board (Kanban)</h4><p>Columns = statuses; drag cards between them.</p><div class="v-best"><b>Best for</b>Visual workflow and team standups</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">📆</div><h4>3 · Calendar</h4><p>Month/week/day grid by due dates; drag to reschedule.</p><div class="v-best"><b>Best for</b>Deadlines and scheduling</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">📊</div><h4>4 · Gantt (Dedicated)</h4><p>Cascading schedules, dependency links, critical path highlighting, and slack time.</p><div class="v-best"><b>Best for</b>Complex waterfall timelines and milestones</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">📈</div><h4>5 · Timeline</h4><p>Linear roadmapping organized by assignee or category without strict Gantt math.</p><div class="v-best"><b>Best for</b>High-level quarterly roadmaps</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">🧮</div><h4>6 · Table</h4><p>Spreadsheet-style grid with custom-field columns, sorting, formulas, and CSV export.</p><div class="v-best"><b>Best for</b>Data review, budgets, and inventories</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">⚖️</div><h4>7 · Workload</h4><p>Capacity bars per teammate by hours, story points, or task count (Business).</p><div class="v-best"><b>Best for</b>Balancing team burn-out &amp; resource planning</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">📦</div><h4>8 · Box View</h4><p>Cards grouped by team member showing who is currently working on what.</p><div class="v-best"><b>Best for</b>Managerial delegation and workload check-ins</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">⚡</div><h4>9 · Activity</h4><p>Aggregated real-time audit stream of status updates, comments, and file uploads.</p><div class="v-best"><b>Best for</b>Project forensic audits and status catch-up</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">🗺️</div><h4>10 · Map</h4><p>Geographic plotting of tasks using Location Custom Fields with Apple/Google maps.</p><div class="v-best"><b>Best for</b>Field service, logistics, real estate, and events</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">🧠</div><h4>11 · Mind Map</h4><p>Visual tree breakdown of tasks or freeform nodes that convert into live tasks.</p><div class="v-best"><b>Best for</b>Architectural brainstorming and product breakdowns</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">🎨</div><h4>12 · Whiteboard</h4><p>Infinite canvas with shapes, sticky notes, connectors, and live draggable tasks.</p><div class="v-best"><b>Best for</b>Sprint retrospectives and UX wireframing</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">📄</div><h4>13 · Doc View</h4><p>A native ClickUp collaborative document pinned right inside the navigation bar.</p><div class="v-best"><b>Best for</b>Project specifications and living team wikis</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">💬</div><h4>14 · Chat</h4><p>A persistent team channel attached to a List or Folder for contextual chat.</p><div class="v-best"><b>Best for</b>Project chatter without external Slack clutter</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">📨</div><h4>15 · Form</h4><p>A public or internal intake form that auto-generates structured tasks with fields.</p><div class="v-best"><b>Best for</b>Bug reporting, client intake briefs, and tickets</div></div>
+        <div class="card view-card lang-en"><div class="v-emoji">🔗</div><h4>16 · Embed</h4><p>Live interactive embedding of external Figma files, Google Sheets, Airtable, or BI dashboards.</p><div class="v-best"><b>Best for</b>All-in-one centralized mission control</div></div>
+
+        <div class="card view-card lang-ar"><div class="v-emoji">📋</div><h4>1 · القائمة (List)</h4><p>الافتراضية: مهام مجمّعة ومفلترة ومرتبة في صفوف، الأسرع في التعديل.</p><div class="v-best"><b>الأفضل لـ</b>التنفيذ اليومي والتعديلات الجماعية</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">🗂️</div><h4>2 · اللوحة (Board)</h4><p>أعمدة كانبان تمثل الحالات؛ اسحب البطاقات بينها بسلاسة.</p><div class="v-best"><b>الأفضل لـ</b>سير العمل البصري واجتماعات الفريق السريعة</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">📆</div><h4>3 · التقويم (Calendar)</h4><p>شبكة شهر/أسبوع/يوم حسب تواريخ الاستحقاق؛ اسحب لتغيير الجدولة.</p><div class="v-best"><b>الأفضل لـ</b>المواعيد النهائية وجدول النشر والتسليم</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">📊</div><h4>4 · مخطط جانت (Gantt)</h4><p>مخطط تدفق المراحل، خطوط الاعتمادية، حساب المسار الحرج (Critical Path) ووقت السماح.</p><div class="v-best"><b>الأفضل لـ</b>المشاريع المعقدة والخطط الزمنية المتسلسلة</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">📈</div><h4>5 · الخط الزمني (Timeline)</h4><p>خارطة طريق خطية أفقية موزعة بحسب الأشخاص أو الأقسام دون تعقيد جانت الحسابي.</p><div class="v-best"><b>الأفضل لـ</b>خرائط الطريق الربع سنوية واستعراض المراحل</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">🧮</div><h4>6 · الجدول (Table)</h4><p>شبكة جدولية بنمط Excel بأعمدة حقول مخصصة وفرز وحسابات وتصدير CSV.</p><div class="v-best"><b>الأفضل لـ</b>مراجعة البيانات المالية والجرد والميزانيات</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">⚖️</div><h4>7 · عبء العمل (Workload)</h4><p>أشرطة سعة لكل شخص تبيّن الساعات أو نقاط القصة أو عدد المهام (Business).</p><div class="v-best"><b>الأفضل لـ</b>منع الإرهاق الوظيفي وموازنة مهام الفريق</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">📦</div><h4>8 · عرض الصندوق (Box)</h4><p>بطاقات مجمعة بحسب الأفراد لإظهار ما يعمل عليه كل فرد حالياً وحجم منجزاته.</p><div class="v-best"><b>الأفضل لـ</b>المتابعة الإدارية السريعة وتوزيع الأدوار</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">⚡</div><h4>9 · النشاط (Activity)</h4><p>سجل زمني حي وتفصيلي لكل التعديلات، الحالات، التعليقات، والملفات المرفوعة.</p><div class="v-best"><b>الأفضل لـ</b>التدقيق الأمني والمتابعة الإشرافية ومعرفة ما جرى</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">🗺️</div><h4>10 · الخريطة (Map)</h4><p>توزيع المهام جغرافياً على الخريطة اعتماداً على حقل الموقع (Location Field).</p><div class="v-best"><b>الأفضل لـ</b>الخدمات الميدانية واللوجستيات والعقارات والفعاليات</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">🧠</div><h4>11 · الخريطة الذهنية (Mind Map)</h4><p>تفكيك بصري شجري للمهام أو عقد عصف ذهني حرة تتحول بنقرة إلى مهام فعلية.</p><div class="v-best"><b>الأفضل لـ</b>التخطيط المعماري وتفكيك أجزاء المشروع</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">🎨</div><h4>12 · السبورة البيضاء (Whiteboard)</h4><p>لوحة رسم حرة لا نهائية بأشكال وملاحظات لاصقة ومهام حية متصلة.</p><div class="v-best"><b>الأفضل لـ</b>العصف الذهني والـ Retros وتخطيط تجربة المستخدم</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">📄</div><h4>13 · عرض المستند (Doc View)</h4><p>تثبيت مستند ويكي أو مواصفات مشروع مباشرة كتبويب أساسي داخل القائمة.</p><div class="v-best"><b>الأفضل لـ</b>أدلة العمل والمواصفات التي يجب أن تلازم المهام</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">💬</div><h4>14 · الدردشة (Chat)</h4><p>قناة محادثة مستمرة ملحقة بالقائمة أو المجلد للحديث السياقي بجانب العمل.</p><div class="v-best"><b>الأفضل لـ</b>نقاشات المشروع دون تشتت بفتح تطبيقات خارجية</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">📨</div><h4>15 · النموذج (Form)</h4><p>نموذج إدخال قابل للنشر يحوّل الإجابات والحقول تلقائياً إلى مهام منظمة.</p><div class="v-best"><b>الأفضل لـ</b>استقبال طلبات العملاء وبلاغات الأخطاء والتذاكر</div></div>
+        <div class="card view-card lang-ar"><div class="v-emoji">🔗</div><h4>16 · التضمين (Embed)</h4><p>تضمين تفاعلي لتصاميم Figma، جداول Google Sheets، أو لوحات تحكم خارجية داخل ClickUp.</p><div class="v-best"><b>الأفضل لـ</b>مركز قيادة موحد يدمج أدواتك الخارجية دون مغادرة الصفحة</div></div>
+      </div>
+
+      <!-- Live CSS UI Mockup: What ClickUp Multi-View looks like in action -->
+      <div class="ui-mockup">
+        <div class="ui-mockup-header">
+          <div class="ui-mockup-dots"><span></span><span></span><span></span></div>
+          <div class="ui-mockup-title">ClickUp 3.0 Workspace · Views &amp; Custom Fields Preview</div>
+          <div style="font-size:11px;color:#a1a1aa;">Q3 Sprint</div>
+        </div>
+        <div class="ui-mockup-body">
+          <div class="ui-mockup-toolbar">
+            <span class="ui-pill active">📋 List</span>
+            <span class="ui-pill">🗂️ Board</span>
+            <span class="ui-pill">📊 Gantt</span>
+            <span class="ui-pill">📆 Calendar</span>
+            <span class="ui-pill">🧮 Table</span>
+            <span class="ui-pill">⚖️ Workload</span>
+            <span class="ui-pill">🎨 Whiteboard</span>
+            <span class="ui-pill" style="margin-inline-start:auto;background:transparent;border:1px dashed rgba(255,255,255,.2);">+ View</span>
+          </div>
+          <table class="ui-table-preview">
+            <thead>
+              <tr>
+                <th>Task Name</th>
+                <th>Assignee</th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Due Date</th>
+                <th>Budget (USD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Mobile App Shell Refactor</strong></td>
+                <td>Omar (Lead)</td>
+                <td><span class="ui-status-badge ui-status-prog">In Progress</span></td>
+                <td><span class="cf-pill amber">High</span></td>
+                <td>Sep 28</td>
+                <td><span class="cf-pill purple">$4,200</span></td>
+              </tr>
+              <tr>
+                <td><strong>OAuth2 &amp; SSO Security Audit</strong></td>
+                <td>Sarah (DevOps)</td>
+                <td><span class="ui-status-badge ui-status-done">Complete</span></td>
+                <td><span class="cf-pill green">Normal</span></td>
+                <td>Sep 20</td>
+                <td><span class="cf-pill purple">$2,800</span></td>
+              </tr>
+              <tr>
+                <td><strong>Bilingual Onboarding Guides</strong></td>
+                <td>Lina (Design)</td>
+                <td><span class="ui-status-badge ui-status-todo">To Do</span></td>
+                <td><span class="cf-pill amber">Urgent</span></td>
+                <td>Oct 02</td>
+                <td><span class="cf-pill purple">$1,500</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div class="note note-tip lang-en"><span class="n-icon">✨</span><div><b>Pro move:</b> save any combination of filter + grouping + sorting + fields as a <b>View</b>, then share it. Each List can hold multiple saved views for different roles (a designer view, an exec view, a client view).</div></div>
@@ -385,8 +482,8 @@
         <div class="flow-step lang-ar"><div class="f-tag">الفعل</div><h5>فإن…</h5><p>عيّن شخصًا، غيّر الحالة، انقل المهمة لقائمة أخرى، أرسل إشعارًا، أنشئ فرعية، استدعِ Webhook.</p></div>
       </div>
 
-      <h3 class="sub lang-en"><span class="idx">6.1</span> Five real recipes worth stealing</h3>
-      <h3 class="sub lang-ar"><span class="idx">6.1</span> خمس وصفات حقيقية تستحق النسخ</h3>
+      <h3 class="sub lang-en"><span class="idx">7.1</span> Five real recipes worth stealing</h3>
+      <h3 class="sub lang-ar"><span class="idx">7.1</span> خمس وصفات حقيقية تستحق النسخ</h3>
       <div class="tbl-wrap"><table class="tbl">
         <thead><tr>
           <th class="lang-en">Scenario</th><th class="lang-en">Trigger</th><th class="lang-en">Actions</th>
@@ -651,14 +748,69 @@
       </div>
     </section>
 
-    <!-- ================= 16 PRICING ================= -->
-    <section class="section" id="pricing">
+    <!-- ================= 16 WHEN NOT TO USE CLICKUP ================= -->
+    <section class="section" id="when-not-to-use">
       <div class="sec-head">
         <div class="sec-num">16</div>
+        <h2 class="lang-en">When <b>NOT to use ClickUp</b></h2>
+        <h2 class="lang-ar">متى <b>لا تستخدم ClickUp؟</b></h2>
+        <p class="lead lang-en">Honest truth: ClickUp is exceptionally powerful, but it is not the right tool for every team or situation. Forcing it where it does not belong creates friction, frustration, and eventual abandonment.</p>
+        <p class="lead lang-ar">حقيقة صريحة: ClickUp أداة فائقة القوة، لكنها ليست الأداة المناسبة لكل فريق أو سيناريو. فرضها في السياق الخاطئ يخلق احتكاكاً وإحباطاً وهجراً محتوماً للأداة.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card lang-en">
+          <div class="c-icon">⚡</div>
+          <h4>1 · Fast-moving engineering-only teams</h4>
+          <p>If your entire company is 3 to 10 software engineers who live in Git commits, PRs, and keyboard shortcuts, ClickUp will feel overly heavy. A streamlined, opinionated dev tool like <b>Linear</b> or native <b>GitHub Projects</b> will deliver 3x faster speed and zero configuration overhead.</p>
+        </div>
+        <div class="card lang-en">
+          <div class="c-icon">📝</div>
+          <h4>2 · Solo operators &amp; simple to-do lists</h4>
+          <p>If you just need a personal checklist of daily errands, reminders, and quick groceries, setting up Spaces, Folders, Lists, and Custom Fields is massive overkill. Stick with lightweight tools like <b>Todoist</b>, <b>Apple Reminders</b>, or a physical paper notebook.</p>
+        </div>
+        <div class="card lang-en">
+          <div class="c-icon">📚</div>
+          <h4>3 · Heavy knowledge &amp; networked research</h4>
+          <p>While ClickUp Docs has improved, it is not built for bidirectional linking, graph thinking, or deep markdown research. If your primary goal is a second brain or knowledge management, tools like <b>Obsidian</b>, <b>Notion</b>, or <b>Logseq</b> remain vastly superior.</p>
+        </div>
+        <div class="card lang-en">
+          <div class="c-icon">📶</div>
+          <h4>4 · Low-spec devices &amp; unstable internet</h4>
+          <p>ClickUp is an Electron desktop app with a heavy JavaScript client. In environments with older computers, limited RAM, or poor field internet, the UI latency will cause friction compared to lightweight native applications.</p>
+        </div>
+
+        <div class="card lang-ar">
+          <div class="c-icon">⚡</div>
+          <h4>1 · فرق تطوير البرمجيات السريعة البحتة</h4>
+          <p>إذا كان فريقك مكوّناً بالكامل من 3 إلى 10 مهندسي برمجيات يعيشون داخل Git وPRs واختصارات لوحة المفاتيح، فإن ClickUp سيبدو ثقيلاً ومكتظاً بالتفاصيل. أداة هندسية رشيقة ومصممة خصيصاً للمطورين مثل <b>Linear</b> أو <b>GitHub Projects</b> ستمنحك سرعة أعلى بـ 3 أضعاف دون تكاليف تهيئة وإعداد معقدة.</p>
+        </div>
+        <div class="card lang-ar">
+          <div class="c-icon">📝</div>
+          <h4>2 · الاستخدام الفردي والمهام اليومية البسيطة</h4>
+          <p>إذا كنت تبحث فقط عن تتبع مهامك الشخصية ومواعيدك اليومية وملاحظاتك السريعة، فإن بناء مساحات ومجلدات وحقول مخصصة يُعد هدراً للوقت وتكلفاً لا داعي له. التطبيقات الخفيفة مثل <b>Todoist</b> أو <b>Apple Reminders</b> أو حتى الورقة والقلم ستكون أكثر نفعاً وسرعة.</p>
+        </div>
+        <div class="card lang-ar">
+          <div class="c-icon">📚</div>
+          <h4>3 · إدارة المعرفة البحتة والبحوث المتشعبة</h4>
+          <p>رغم تطور ClickUp Docs، إلا أنه ليس بيئة مثالية لبناء «الدماغ الثاني» أو الروابط المعرفية الثنائية والرسوم البيانية الشبكية للأفكار. إذا كان غرضك الأساسي هو التوثيق والبحث والتأليف المعرفي، فإن أدوات متخصصة مثل <b>Obsidian</b> أو <b>Notion</b> أو <b>Logseq</b> تتفوق بمراحل.</p>
+        </div>
+        <div class="card lang-ar">
+          <div class="c-icon">📶</div>
+          <h4>4 · الأجهزة المحدودة أو الاتصال غير المستقر</h4>
+          <p>يعتمد ClickUp على محرك Electron ومكتبات جافاسكريبت غنية تتطلب عتاداً متوسطاً إلى قوي واتصالاً مستمراً بالإنترنت. في البيئات الميدانية ذات الإنترنت المتقطع أو الحواسيب ذات الذاكرة المحدودة، ستشعر ببطء استجابة قد يقلل إنتاجية الفريق مقارنة بالبرامج المحلية الخفيفة.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 17 PRICING ================= -->
+    <section class="section" id="pricing">
+      <div class="sec-head">
+        <div class="sec-num">17</div>
         <h2 class="lang-en">Pricing: <b>pick the right plan</b></h2>
         <h2 class="lang-ar">الأسعار: <b>اختر الخطة الصحيحة</b></h2>
-        <p class="lead lang-en">Prices below are the official USD rates (annual billing first, monthly second). They change periodically, always confirm on clickup.com/pricing before buying.</p>
-        <p class="lead lang-ar">الأسعار أدناه هي الرسمية بالدولار (سنوي أولًا ثم شهري). تتغير دوريًا، تحقق دائمًا من clickup.com/pricing قبل الشراء.</p>
+        <p class="lead lang-en">Prices below reflect official rates (annual billing first, monthly second), verified and recorded in <strong>September 2026</strong>. Always confirm directly on clickup.com/pricing before making purchasing decisions.</p>
+        <p class="lead lang-ar">الأسعار أدناه هي الرسمية المعتمدة بالدولار (سنوي أولاً ثم شهري)، رُصدت وثُبتت في <strong>سبتمبر 2026</strong>. تحقق دائماً من الرابط الرسمي clickup.com/pricing قبل الاشتراك.</p>
       </div>
 
       <div class="plans">
@@ -718,10 +870,10 @@
       <div class="note note-info lang-ar"><span class="n-icon">🧠</span><div><b>إضافة ClickUp Brain:</b> نحو <b>9$/مستخدم/شهر</b> (سنوي) فوق أي خطة مدفوعة، وتوجد حزمة أوسع <b>Everything AI</b> (وكلاء، أتمتة ذكية، توليد صور) بنحو <b>28$/مستخدم/شهر</b>. تُشترى لمساحة العمل كاملة وتُطبق على كل الأعضاء.</div></div>
     </section>
 
-    <!-- ================= 17 COMPARISONS ================= -->
+    <!-- ================= 18 COMPARISONS ================= -->
     <section class="section" id="comparisons">
       <div class="sec-head">
-        <div class="sec-num">17</div>
+        <div class="sec-num">18</div>
         <h2 class="lang-en">ClickUp vs. the field: <b>honest comparison</b></h2>
         <h2 class="lang-ar">ClickUp في مواجهة المنافسين: <b>مقارنة صادقة</b></h2>
         <p class="lead lang-en">2026 consensus: ClickUp is the "feature monster" with the best value-per-dollar, the recurring caveat is performance on huge workspaces.</p>
@@ -753,23 +905,23 @@
       <div class="note note-warn lang-ar"><span class="n-icon">🌐</span><div><b>العامل العربي:</b> لا تقدم أي من هذه الأدوات واجهة عربية RTL كاملة اليوم، بما في ذلك ClickUp (دعم RTL ما زال طلبًا مفتوحًا). ما يختلف هو جودة التعامل مع <em>المحتوى العربي</em>: يتعامل ClickUp جيدًا مع عناوين المهام والمستندات وترجمة الذكاء الاصطناعي بالعربية.</div></div>
     </section>
 
-        <!-- ================= 18 GLOSSARY ================= -->
+    <!-- ================= 19 GLOSSARY ================= -->
     <section class="section" id="glossary">
       <div class="sec-head">
-        <div class="sec-num">18</div>
+        <div class="sec-num">19</div>
         <h2 class="lang-en">Glossary: <b>speak ClickUp fluently</b></h2>
         <h2 class="lang-ar">المسرد: <b>تحدث لغة ClickUp بطلاقة</b></h2>
         <p class="lead lang-en">The app interface is English-only today, so this glossary pairs every term you will see on screen with its Arabic meaning. Tap any highlighted term inside this guide for an instant explanation, or search the full list below.</p>
         <p class="lead lang-ar">واجهة التطبيق إنجليزية اليوم، لذا يربط هذا المسرد كل مصطلح ستراه على الشاشة بمعناه العربي. اضغط أي مصطلح مُظلل داخل الدليل لشرح فوري، أو ابحث في القائمة الكاملة أدناه.</p>
       </div>
-      <input class="gsearch" id="glossarySearch" type="search" placeholder="ابحث عن مصطلح... / Search a term..."> aria-label="Filter glossary terms">
+      <input class="gsearch" id="glossarySearch" type="search" placeholder="ابحث عن مصطلح... / Search a term..." aria-label="Filter glossary terms">
       <div class="glossary-grid" id="glossaryGrid"></div>
     </section>
 
-<!-- ================= 19 FAQ ================= -->
+    <!-- ================= 20 FAQ ================= -->
     <section class="section" id="faq">
       <div class="sec-head">
-        <div class="sec-num">19</div>
+        <div class="sec-num">20</div>
         <h2 class="lang-en">Frequently asked questions</h2>
         <h2 class="lang-ar">الأسئلة الشائعة</h2>
         <p class="lead lang-en">The ten questions people ask before committing.</p>
@@ -817,6 +969,57 @@
       <h5 class="lang-ar">الدليل الشامل لـ ClickUp</h5>
       <p class="lang-en">An independent, bilingual (Arabic/English) educational guide to ClickUp. Not affiliated with ClickUp or Mango Technologies. All product names and trademarks belong to their respective owners. Prices and features change frequently, always verify on clickup.com.</p>
       <p class="lang-ar">دليل تعليمي مستقل ثنائي اللغة (عربي/إنجليزي) لأداة ClickUp. غير تابع لشركة ClickUp أو Mango Technologies، وجميع الأسماء والعلامات التجارية ملك لأصحابها. الأسعار والميزات تتغير باستمرار، تحقق دائمًا من clickup.com.</p>
+      
+      <!-- Author Profile Card -->
+      <div class="author-card">
+        <div class="author-avatar">AIR</div>
+        <div class="author-info">
+          <h4 class="lang-en">Authored &amp; Maintained by Ahmed Issam Ramadan</h4>
+          <h4 class="lang-ar">إعداد وتطوير: أحمد عصام رمضان</h4>
+          <p class="lang-en">Digital Product Builder &amp; Workflow Automation Specialist. Focused on product operations, UI/UX architecture, and autonomous productivity systems.</p>
+          <p class="lang-ar">مطور منتجات رقمية ومتخصص في هندسة الأتمتة وتجارب الواجهات وبناء أنظمة الإنتاجية وإدارة المشروعات.</p>
+          <div class="author-links">
+            <a href="https://github.com/ahmedissamramadan" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/ahmedissamramadan" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:ahmedissam.work@gmail.com">Contact / تواصل</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- September 2026 Changelog -->
+      <div class="changelog-box">
+        <h6 class="lang-en">Release &amp; Verification Log (September 2026 Edition)</h6>
+        <h6 class="lang-ar">سجل التحديثات والتحقق (إصدار سبتمبر 2026)</h6>
+        <ul class="lang-en">
+          <li>Completed all 16 ClickUp view breakdowns including dedicated Gantt, Box, Activity, Map, and Embed views.</li>
+          <li>Added dedicated critical analysis: "When NOT to use ClickUp" for engineering-heavy and minimal workflows.</li>
+          <li>Verified official USD pricing plans and ClickUp Brain add-on rates against clickup.com/pricing.</li>
+          <li>Documented funding benchmarks: $4B valuation Series C (Oct 2021) and 2M+ worldwide active teams.</li>
+          <li>Implemented one-click clean PDF printing layout with dedicated media queries.</li>
+        </ul>
+        <ul class="lang-ar">
+          <li>استكمال تفاصيل 16 طريقة عرض كاملة بما فيها Gantt المستقل، وعرض الصندوق، وسجل النشاط، والخرائط، والتضمين.</li>
+          <li>إضافة قسم استراتيجي للمصداقية: «متى لا تستخدم ClickUp» لفرق البرمجة الرشيقة والاستخدامات الفردية البسيطة.</li>
+          <li>توثيق ومطابقة أسعار الخطط الرسمية وحزم ذكاء ClickUp Brain وفق تسعير سبتمبر 2026 الرسمي.</li>
+          <li>توثيق مصادر الأرقام: تقييم 4 مليارات دولار (جولة التمويل C بأكتوبر 2021) وأكثر من مليوني فريق نشط.</li>
+          <li>توفير تنسيق طباعة وحفظ PDF نظيف بضغطة زر وتصميم مخصص للطباعة الورقية والرقمية.</li>
+        </ul>
+      </div>
+
+      <!-- Feedback / Corrections Bar -->
+      <div class="feedback-bar">
+        <span class="lang-en">Found an outdated price or a typo?</span>
+        <span class="lang-ar">هل لاحظت سعرًا قديمًا أو خطأ بحاجة لتصحيح؟</span>
+        <a class="fb-link" href="https://github.com/ahmedissamramadan/clickup-master-guide/issues/new" target="_blank" rel="noopener">
+          <span class="lang-en">Open an issue on GitHub →</span>
+          <span class="lang-ar">افتح بلاغ تصحيح على GitHub ←</span>
+        </a>
+        <span>·</span>
+        <a class="fb-link" href="mailto:ahmedissam.work@gmail.com?subject=ClickUp%20Guide%20Feedback">
+          <span class="lang-en">Email corrections</span>
+          <span class="lang-ar">أرسل تصحيحًا عبر البريد</span>
+        </a>
+      </div>
     </div>
     <div>
       <h5 class="lang-en">Official resources</h5>
@@ -827,11 +1030,17 @@
         <li><a href="https://clickup.com/pricing" target="_blank" rel="noopener">clickup.com/pricing</a></li>
         <li><a href="https://clickup.com/university" target="_blank" rel="noopener">ClickUp University</a></li>
       </ul>
+      <div style="margin-top:28px;">
+        <h5 class="lang-en">Community Templates</h5>
+        <h5 class="lang-ar">قوالب مساحات العمل</h5>
+        <p style="font-size:13px;color:var(--ink-2);line-height:1.6;" class="lang-en">Ready-to-use workspace templates for marketing sprints, software backlogs, and content operations.</p>
+        <p style="font-size:13px;color:var(--ink-2);line-height:1.6;" class="lang-ar">قوالب جاهزة للتطبيق الفوري في مساحة عملك لسبرنتات التسويق، وإدارة المحتوى، والمشاريع البرمجية.</p>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="lang-en">Made with care · <span data-year>2026</span> · Bilingual edition AR/EN</span>
-    <span class="lang-ar">صُنع بعناية · <span data-year>2026</span> · إصدار ثنائي اللغة عربي/إنجليزي</span>
+    <span class="lang-en">Made with care · <span data-year>2026</span> · Curated by Ahmed Issam Ramadan</span>
+    <span class="lang-ar">صُنع بعناية · <span data-year>2026</span> · إعداد وتطوير أحمد عصام رمضان</span>
     <span class="lang-en">Last content review: September 2026</span>
     <span class="lang-ar">آخر مراجعة للمحتوى: سبتمبر 2026</span>
   </div>

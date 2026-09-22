@@ -83,53 +83,83 @@
     if (toTop) toTop.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    var printBtn = doc.getElementById('printBtn');
+    if (printBtn) {
+      printBtn.addEventListener('click', function () {
+        window.print();
+      });
+    }
   }
 
   /* ---------- Table of contents ---------- */
-  var SECTION_IDS = ['what-is-clickup', 'hierarchy', 'tasks', 'views', 'simulator', 'custom-fields', 'automations', 'ai-brain', 'docs-whiteboards', 'dashboards-goals', 'time-sprints', 'integrations-security', 'get-started', 'best-practices', 'mistakes', 'pricing', 'comparisons', 'glossary', 'faq'];
+  var SECTION_IDS = [
+    'what-is-clickup',
+    'hierarchy',
+    'tasks',
+    'views',
+    'simulator',
+    'custom-fields',
+    'automations',
+    'ai-brain',
+    'docs-whiteboards',
+    'dashboards-goals',
+    'time-sprints',
+    'integrations-security',
+    'get-started',
+    'best-practices',
+    'mistakes',
+    'when-not-to-use',
+    'pricing',
+    'comparisons',
+    'glossary',
+    'faq'
+  ];
 
   var TOC_LABELS = {
     en: {
       'what-is-clickup': '01 · What is ClickUp',
       'hierarchy': '02 · The Hierarchy',
       'tasks': '03 · Tasks',
-      'views': '04 · Views',
+      'views': '04 · 16+ Views',
       'simulator': '05 · Live Simulator',
       'custom-fields': '06 · Custom Fields',
-      'automations': '06 · Automations',
-      'ai-brain': '07 · ClickUp Brain',
-      'docs-whiteboards': '08 · Docs & Whiteboards',
-      'dashboards-goals': '09 · Dashboards & Goals',
-      'time-sprints': '10 · Time & Sprints',
-      'integrations-security': '11 · Integrations & Security',
-      'get-started': '12 · First 15 Minutes',
-      'best-practices': '13 · Best Practices',
-      'mistakes': '14 · Common Mistakes',
-      'pricing': '15 · Pricing',
-      'comparisons': '16 · Comparisons',
-      'glossary': '17 · Glossary',
-      'faq': '18 · FAQ'
+      'automations': '07 · Automations',
+      'ai-brain': '08 · ClickUp Brain',
+      'docs-whiteboards': '09 · Docs & Whiteboards',
+      'dashboards-goals': '10 · Dashboards & Goals',
+      'time-sprints': '11 · Time & Sprints',
+      'integrations-security': '12 · Integrations & Security',
+      'get-started': '13 · First 15 Minutes',
+      'best-practices': '14 · Best Practices',
+      'mistakes': '15 · Common Mistakes',
+      'when-not-to-use': '16 · When NOT to Use',
+      'pricing': '17 · Pricing (2026)',
+      'comparisons': '18 · Comparisons',
+      'glossary': '19 · Glossary',
+      'faq': '20 · FAQ'
     },
     ar: {
       'what-is-clickup': '01 · ما هو ClickUp',
       'hierarchy': '02 · الهيكل الهرمي',
       'tasks': '03 · المهام',
-      'views': '04 · طرق العرض',
+      'views': '04 · أكثر من 16 طريقة عرض',
       'simulator': '05 · المحاكاة الحية',
       'custom-fields': '06 · الحقول المخصصة',
-      'automations': '06 · الأتمتة',
-      'ai-brain': '07 · ClickUp Brain',
-      'docs-whiteboards': '08 · المستندات والسبورات',
-      'dashboards-goals': '09 · اللوحات والأهداف',
-      'time-sprints': '10 · الوقت والسبرنتات',
-      'integrations-security': '11 · التكاملات والأمان',
-      'get-started': '12 · أول 15 دقيقة',
-      'best-practices': '13 · أفضل الممارسات',
-      'mistakes': '14 · الأخطاء الشائعة',
-      'pricing': '15 · الأسعار',
-      'comparisons': '16 · المقارنات',
-      'glossary': '17 · المسرد',
-      'faq': '18 · الأسئلة الشائعة'
+      'automations': '07 · الأتمتة',
+      'ai-brain': '08 · ClickUp Brain',
+      'docs-whiteboards': '09 · المستندات والسبورات',
+      'dashboards-goals': '10 · اللوحات والأهداف',
+      'time-sprints': '11 · الوقت والسبرنتات',
+      'integrations-security': '12 · التكاملات والأمان',
+      'get-started': '13 · أول 15 دقيقة',
+      'best-practices': '14 · أفضل الممارسات',
+      'mistakes': '15 · الأخطاء الشائعة',
+      'when-not-to-use': '16 · متى لا تستخدمه',
+      'pricing': '17 · الأسعار (2026)',
+      'comparisons': '18 · المقارنات',
+      'glossary': '19 · المسرد',
+      'faq': '20 · الأسئلة الشائعة'
     }
   };
 
